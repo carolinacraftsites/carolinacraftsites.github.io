@@ -40,13 +40,6 @@ export function Header() {
             Pricing
           </button>
           <button
-            onClick={() => scrollToSection("testimonials")}
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            data-testid="link-testimonials"
-          >
-            Testimonials
-          </button>
-          <button
             onClick={() => scrollToSection("contact")}
             className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
             data-testid="link-contact"
