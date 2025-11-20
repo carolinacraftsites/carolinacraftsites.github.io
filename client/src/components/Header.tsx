@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "./ThemeToggle";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    // Close mobile menu if open
+    setMobileMenuOpen(false);
+
     // Allow default behavior for Cmd+Click (Mac) or Ctrl+Click (Windows) to open in new tab
     if (e.metaKey || e.ctrlKey) {
       return;
@@ -60,7 +65,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
           <Button
             className="hidden md:flex"
             asChild
@@ -74,12 +78,66 @@ export function Header() {
             variant="ghost"
             size="icon"
             className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-menu"
           >
-            <Menu className="h-5 w-5" />
+            {mobileMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </Button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-b bg-background">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <a
+              href="#services"
+              onClick={(e) => handleLinkClick(e, "services")}
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+              data-testid="mobile-link-services"
+            >
+              Services
+            </a>
+            <a
+              href="#portfolio"
+              onClick={(e) => handleLinkClick(e, "portfolio")}
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+              data-testid="mobile-link-portfolio"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#pricing"
+              onClick={(e) => handleLinkClick(e, "pricing")}
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+              data-testid="mobile-link-pricing"
+            >
+              Pricing
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => handleLinkClick(e, "contact")}
+              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+              data-testid="mobile-link-contact"
+            >
+              Contact
+            </a>
+            <Button
+              className="w-full"
+              asChild
+              data-testid="mobile-button-get-started"
+            >
+              <a href="#contact" onClick={(e) => handleLinkClick(e, "contact")}>
+                Get Started
+              </a>
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
