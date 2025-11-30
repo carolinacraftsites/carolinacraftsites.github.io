@@ -12,25 +12,28 @@ export function Testimonials() {
       role: "Licensed Plumber",
       location: "Charlotte, NC",
       image: plumberHeadshot,
-      quote: "Carolina Craft Sites built my website in less than a week. I'm now getting 3-4 new customer calls every day. Best investment I've made for my business.",
-      rating: 5
+      quote:
+        "Carolina Craft Sites built my website in less than a week. I'm now getting 3-4 new customer calls every day. Best investment I've made for my business.",
+      rating: 5,
     },
     {
       name: "Sarah Martinez",
       role: "Master Electrician",
       location: "Raleigh, NC",
       image: electricianHeadshot,
-      quote: "The team understood exactly what I needed. My website looks professional and my customers can easily find my services and contact me. Highly recommend!",
-      rating: 5
+      quote:
+        "The team understood exactly what I needed. My website looks professional and my customers can easily find my services and contact me. Highly recommend!",
+      rating: 5,
     },
     {
       name: "Tom Anderson",
       role: "Custom Carpenter",
       location: "Durham, NC",
       image: carpenterHeadshot,
-      quote: "I can finally showcase my woodworking projects online. The photo gallery looks amazing and I've landed two major projects from my website already.",
-      rating: 5
-    }
+      quote:
+        "I can finally showcase my woodworking projects online. The photo gallery looks amazing and I've landed two major projects from my website already.",
+      rating: 5,
+    },
   ];
 
   return (
@@ -41,7 +44,8 @@ export function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join hundreds of tradespeople who've grown their business with a professional website
+            Join trusted local businesses who've grown their business with a
+            professional website
           </p>
         </div>
 
@@ -58,14 +62,26 @@ export function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="text-sm mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                <p className="text-sm mb-6 leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
                 <div className="flex items-center gap-3">
                   <Avatar>
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                    <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                    <AvatarImage
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                    />
+                    <AvatarFallback>
+                      {testimonial.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </AvatarFallback>
                   </Avatar>
                   <div>
-                    <div className="font-semibold text-sm">{testimonial.name}</div>
+                    <div className="font-semibold text-sm">
+                      {testimonial.name}
+                    </div>
                     <div className="text-xs text-muted-foreground">
                       {testimonial.role} • {testimonial.location}
                     </div>

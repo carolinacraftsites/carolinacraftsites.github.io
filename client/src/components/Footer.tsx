@@ -1,17 +1,6 @@
-export function Footer() {
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    // Allow default behavior for Cmd+Click (Mac) or Ctrl+Click (Windows) to open in new tab
-    if (e.metaKey || e.ctrlKey) {
-      return;
-    }
+import { Link } from "wouter";
 
-    // Otherwise, smooth scroll to section
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+export function Footer() {
 
   return (
     <footer className="w-full border-t bg-muted/30">
@@ -20,12 +9,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Carolina Craft Sites</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Professional websites built specifically for tradespeople who want to grow their business online.
+              Professional websites built specifically for local businesses who
+              want to grow their business online.
             </p>
-            <div className="flex flex-col gap-1 text-sm text-muted-foreground">
-              <div>10+ years in business</div>
-              <div>500+ websites delivered</div>
-            </div>
           </div>
 
           <div>
@@ -33,8 +19,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#services"
-                  onClick={(e) => handleLinkClick(e, "services")}
+                  href="/#services"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-website-design"
                 >
@@ -43,8 +28,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
-                  onClick={(e) => handleLinkClick(e, "services")}
+                  href="/#services"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-seo"
                 >
@@ -53,8 +37,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
-                  onClick={(e) => handleLinkClick(e, "services")}
+                  href="/#services"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-hosting"
                 >
@@ -63,8 +46,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
-                  onClick={(e) => handleLinkClick(e, "services")}
+                  href="/#services"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-support"
                 >
@@ -79,8 +61,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#portfolio"
-                  onClick={(e) => handleLinkClick(e, "portfolio")}
+                  href="/#portfolio"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-portfolio"
                 >
@@ -89,8 +70,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#pricing"
-                  onClick={(e) => handleLinkClick(e, "pricing")}
+                  href="/#pricing"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-pricing"
                 >
@@ -98,14 +78,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => handleLinkClick(e, "contact")}
+                <Link
+                  href="/contact"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid="footer-link-contact"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

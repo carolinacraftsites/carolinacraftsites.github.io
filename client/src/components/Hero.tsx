@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/Hero_devices_showcase_background_559f321a.png";
+import heroImage from "@assets/generated_images/asheville.jpg";
 
 export function Hero() {
 
@@ -16,7 +16,7 @@ export function Hero() {
       <div className="relative container mx-auto px-4 md:px-8 py-24 md:py-32 lg:py-40">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Professional Websites for Your Business
+            Professional Websites for Your Local Business
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
             Get your business online in days, not weeks. Custom websites built for small businesses and professionals who want to grow their online presence.
@@ -45,7 +45,7 @@ export function Hero() {
             </Button>
           </div>
           <p className="mt-6 text-sm text-white/80">
-            Starting at $499 • No monthly fees • Quick turnaround
+            Starting at $495
           </p>
         </div>
       </div>

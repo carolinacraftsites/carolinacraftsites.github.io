@@ -15,7 +15,7 @@ export default function Contact() {
                 Get In Touch
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Ready to take your business online? Reach out to us and we'll get back to you within 24 hours.
+                Ready to take your business online? Reach out to us and we'll get started.
               </p>
             </div>
 
@@ -29,10 +29,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Call Us</h3>
                       <a
-                        href="tel:+19195550123"
+                        href="tel:+18283358117"
                         className="text-xl text-primary hover:underline"
                       >
-                        (919) 555-0123
+                        (828) 335-8117
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         Monday - Friday, 9am - 5pm EST
@@ -47,10 +47,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Email Us</h3>
                       <a
-                        href="mailto:hello@carolinacraftsites.com"
+                        href="mailto:wncnathan@gmail.com"
                         className="text-xl text-primary hover:underline"
                       >
-                        hello@carolinacraftsites.com
+                        wncnathan@gmail.com
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         We respond within 24 hours
@@ -65,9 +65,8 @@ export default function Contact() {
                   <h3 className="font-semibold mb-3">Why Choose Us?</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>✓ 10+ years of experience</li>
-                    <li>✓ Over 500 websites delivered</li>
-                    <li>✓ Average 7-day turnaround</li>
-                    <li>✓ 100% satisfaction guarantee</li>
+                    <li>✓ Average 3-day turnaround</li>
+                    <li>✓ You don't pay until you approve the site</li>
                   </ul>
                 </CardContent>
               </Card>

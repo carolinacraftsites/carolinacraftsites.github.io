@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import { Link } from "wouter";
 
 export function Pricing() {
   const coreFeatures = [
@@ -9,10 +10,9 @@ export function Pricing() {
     "Uses whatever info you already have",
     "AI copy, photos, and layout",
     "Mobile optimized",
-    "Contact form included",
-    "Domain connected",
     "Delivered in 3 days",
-    "One light revision pass"
+    "One light revision pass",
+    "Continuing service avilable, or take over the site maintenence yourself",
   ];
 
   const addOns = [
@@ -21,12 +21,6 @@ export function Pricing() {
     { name: "Premium Domain Setup", price: "$50" }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="pricing" className="w-full py-16 md:py-24 bg-muted/30">
@@ -62,13 +56,14 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Button
-                className="w-full"
-                onClick={scrollToContact}
-                data-testid="button-get-started"
-              >
-                Get Started
-              </Button>
+              <Link href="/contact">
+                <Button
+                  className="w-full"
+                  data-testid="button-get-started"
+                >
+                  Get Started
+                </Button>
+              </Link>
             </CardContent>
           </Card>
 
@@ -103,11 +98,14 @@ export function Pricing() {
               <CardContent className="p-6 pt-0">
                 <div className="space-y-2 mb-4">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-sm font-medium">Hosting + Updates</span>
-                    <span className="text-base font-semibold">— $25-$40/mo</span>
+                    <span className="text-sm font-medium">Hosting + Uptime Support</span>
+                    <span className="text-base font-semibold">— $35/mo</span>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    (Hosting, SSL, backups, uptime monitoring, one small monthly update)
+                    Monthly service available, or follow our guide to host the site yourself.
+                    <br/>
+                    <br/>
+                    (monthly fee includes hosting, SSL, backups, and uptime monitoring)
                   </p>
                 </div>
               </CardContent>
