@@ -25,7 +25,7 @@ export function Portfolio() {
       category: "Hospitality Business",
       title: "Local Pool Hall",
       description: "Vibrant online presence for games, drinks, and good times",
-      link: "https://fats-cat-billiards.vercel.app/",
+      link: "/fatcatsbilliards",
     },
   ];
 
