@@ -40,7 +40,7 @@ export function Pricing() {
             <CardHeader className="p-6">
               <div className="flex items-baseline gap-2 mb-2">
                 <h3 className="text-2xl font-semibold">Core Website</h3>
-                <span className="text-3xl font-bold">— $495</span>
+                <span className="text-3xl font-bold">— $500</span>
               </div>
             </CardHeader>
             <CardContent className="p-6 pt-0">

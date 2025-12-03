@@ -45,7 +45,7 @@ export function Hero() {
             </Button>
           </div>
           <p className="mt-6 text-sm text-white/80">
-            Starting at $495
+            Get a site up for $500
           </p>
         </div>
       </div>
