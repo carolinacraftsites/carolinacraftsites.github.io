@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone } from "lucide-react";
+import headshotImg from "@assets/generated_images/nathankoerschnerheadshot.jpg";
 
 export default function Contact() {
   return (
@@ -69,6 +70,40 @@ export default function Contact() {
                   </ul>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-24">
+          <div className="container mx-auto px-4 md:px-8">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center">
+                About Nathan
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="order-2 md:order-1">
+                  <div className="space-y-4 text-muted-foreground">
+                    <p>
+                      With over a decade of experience building websites, I've had the privilege of helping businesses establish their online presence and connect with their customers in meaningful ways.
+                    </p>
+                    <p>
+                      I'm excited to now offer my skills more broadly with the support of modern generative AI tools, which allow me to deliver high-quality, custom websites faster and more affordably than ever before.
+                    </p>
+                    <p>
+                      As an 8th generation local with deep ties to Western North Carolina, I understand the unique needs of businesses in our community. Coming from a long line of business owners, I know firsthand the challenges and opportunities that local businesses face, and I'm passionate about helping fellow entrepreneurs succeed online.
+                    </p>
+                  </div>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src={headshotImg}
+                      alt="Nathan Koerschner"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

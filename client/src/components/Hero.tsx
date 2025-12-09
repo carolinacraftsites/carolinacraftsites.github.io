@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import heroImage from "@assets/generated_images/asheville.jpg";
+import heroImage from "@assets/generated_images/hero.jpg";
 
 export function Hero() {
 
@@ -10,7 +10,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/30 to-black/70" />
       </div>
 
       <div className="relative container mx-auto px-4 md:px-8 py-24 md:py-32 lg:py-40">
@@ -19,7 +19,7 @@ export function Hero() {
             Professional Websites for Your Local Business
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-            Get your business online in days, not weeks. Custom websites built for small businesses and professionals who want to grow their online presence.
+          Don't delay your growth any futher. We'll get your business online in a few easy steps.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact">
@@ -28,7 +28,7 @@ export function Hero() {
                 variant="default"
                 data-testid="button-hero-cta"
               >
-                Get Your Website Today
+                Start the process
               </Button>
             </Link>
             <Button
