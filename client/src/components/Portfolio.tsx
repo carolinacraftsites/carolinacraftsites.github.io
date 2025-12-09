@@ -1,11 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import angellandscapingImg from "@assets/generated_images/angellandscaping.png";
-import extremeapImg from "@assets/generated_images/extremeap.png";
+import easystreetautoImg from "@assets/generated_images/easystreetauto.png";
 import fatcatsImg from "@assets/generated_images/fatcats.png";
 
 export function Portfolio() {
   const portfolioItems = [
+    {
+      image: fatcatsImg,
+      category: "Hospitality Business",
+      title: "Local Pool Hall",
+      description: "Vibrant online presence for games, drinks, and good times",
+      link: "/fatcatsbilliards",
+    },
     {
       image: angellandscapingImg,
       category: "Service Business",
@@ -14,18 +21,11 @@ export function Portfolio() {
       link: "https://carolinacraftsites.com/AngelLandscaping",
     },
     {
-      image: extremeapImg,
+      image: easystreetautoImg,
       category: "Professional Services",
-      title: "Professional Engraving Services",
+      title: "Famed Local Mechanic",
       description: "Professional site highlighting reliability and expertise",
-      link: "https://carolinacraftsites.com/extremeap",
-    },
-    {
-      image: fatcatsImg,
-      category: "Hospitality Business",
-      title: "Local Pool Hall",
-      description: "Vibrant online presence for games, drinks, and good times",
-      link: "/fatcatsbilliards",
+      link: "https://carolinacraftsites.com/easystreetauto",
     },
   ];
 
