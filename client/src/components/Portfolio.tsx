@@ -11,7 +11,7 @@ export function Portfolio() {
       category: "Hospitality Business",
       title: "Local Pool Hall",
       description: "Vibrant online presence for games, drinks, and good times",
-      link: "fatcatsbilliards.com",
+      link: "https://fatcatsbilliards.com",
     },
     {
       image: angellandscapingImg,
