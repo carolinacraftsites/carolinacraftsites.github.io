@@ -17,7 +17,6 @@ export function Pricing() {
 
   const addOns = [
     { name: "Extra Pages", price: "$75/page" },
-    { name: "AI Logo Refresh", price: "$75" },
     { name: "Premium Domain Setup", price: "$50" }
   ];
 
